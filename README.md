@@ -1,6 +1,6 @@
-# MERN Containerization with Docker Compose
+# MERN App Containerization with Docker Compose
 
-This project demonstrates how to containerize a full-stack MERN (MongoDB, Express, React, Node.js) application using Docker Compose. The application is separated into multiple containers for each service: MongoDB, Express (Node.js), and React.
+This project containerizes a MERN (MongoDB, Express, React, Node.js) stack using Docker Compose, with custom networks and persistent MongoDB data.
 
 ## Table of Contents
 
@@ -14,28 +14,27 @@ This project demonstrates how to containerize a full-stack MERN (MongoDB, Expres
 
 ## Project Overview
 
-This is a simple MERN app that runs on Docker containers using Docker Compose. The goal is to showcase how to containerize each layer of the MERN stack and manage dependencies and networking using Docker Compose.
+This project demonstrates how to containerize a MERN application using Docker Compose, utilizing a custom bridge network (`mern_network`) to allow seamless communication between the services and persistent storage for MongoDB.
 
-### Components
+### Services
 
-1. **MongoDB** - The database.
-2. **Express.js (Node.js)** - Backend service.
-3. **React.js** - Frontend service.
+1. **MongoDB** - NoSQL database service, data is persisted locally using Docker volumes.
+2. **Backend (Express.js)** - Node.js backend that connects to MongoDB and serves API endpoints.
+3. **Frontend (React.js)** - A React app that consumes the backend APIs.
 
 ## Technologies Used
 
-- **MongoDB** - NoSQL database for data storage.
-- **Express.js** - Backend framework for building APIs.
-- **React.js** - Frontend framework for building the user interface.
-- **Node.js** - Server-side JavaScript runtime.
-- **Docker** - For containerization.
-- **Docker Compose** - For multi-container orchestration.
+- **MongoDB** - NoSQL database.
+- **Express.js (Node.js)** - Backend framework.
+- **React.js** - Frontend framework.
+- **Docker** - Containerization platform.
+- **Docker Compose** - Tool for defining and running multi-container Docker applications.
 
 ## Setup Instructions
 
 ### Prerequisites
 
-- Ensure you have Docker and Docker Compose installed on your system.
+- Install Docker and Docker Compose on your system.
 
 ### Clone the Repository
 
